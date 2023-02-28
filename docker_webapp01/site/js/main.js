@@ -26,7 +26,7 @@ function calcTributes(term) {
 	if (term < 181) {
 		return 22.5 / 100;
 		} else if (term > 180 && term < 361) {
-			return 17.5 / 100;
+			return 20 / 100;
 			} else if (term > 360 && term < 721) {
 				return 17.5 / 100;
 				} else {
@@ -44,6 +44,7 @@ function calcPre(rate, tribute) {
 
 function calcPos(rate, tribute) {
 	let selic = 13.65 / 100;
+//	let selic = getSelic();	
 	var profit = (rate * selic) * (1 - tribute);
 	profit = profit * 100;
 	return profit.toFixed(2);	
